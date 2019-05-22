@@ -17,6 +17,8 @@ Available branches
 
 * [scikit-build-manylinux1-2019-03-01-91cb02fb8](https://github.com/scikit-build/manylinux/tree/scikit-build-manylinux1-2019-03-01-91cb02fb8): Add Python 3.8.0a2. Integration in upstream was not possible. Read [here](https://github.com/pypa/manylinux/pull/273) for more details.
 
+* [scikit-build-manylinux2010-2019-05-06-1a8986532](https://github.com/scikit-build/manylinux/tree/scikit-build-manylinux2010-2019-05-06-1a8986532): Add Python 3.8.0a4.
+
 
 What is the branch naming convention ?
 --------------------------------------

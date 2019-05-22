@@ -70,6 +70,45 @@ git checkout -b ${BRANCH_NAME} ${manylinuxSHA}
 5. Publish the branch. (directly in this repo if you have push rights, or on a fork)
 
 
+How to rebuild the docker images ?
+----------------------------------
+
+* for `manylinux2010`, locally build `manylinux2010_centos-6-no-vsyscall` image
+
+```
+cd docker/glibc
+docker build --rm -t quay.io/pypa/manylinux2010_centos-6-no-vsyscall .
+```
+
+* for both `manylinux1` and `manylinux2010`
+
+```
+docker/build_scripts/prefetch.sh openssl curl
+
+COMMIT=$(git rev-parse HEAD | head -c 9)
+echo "COMMIT [${COMMIT}]"
+
+PLATFORM=x86_64
+docker build --rm -t scikitbuild/manylinux2010_${PLATFORM}:${COMMIT} -f docker/Dockerfile-${PLATFORM} docker/
+
+docker push scikitbuild/manylinux2010_${PLATFORM}:${COMMIT}
+```
+
+* for `manylinux1`
+
+```
+docker/build_scripts/prefetch.sh openssl curl
+
+COMMIT=$(git rev-parse HEAD | head -c 9)
+echo "COMMIT [${COMMIT}]"
+
+PLATFORM=i686
+docker build --rm -t scikitbuild/manylinux2010_${PLATFORM}:${COMMIT} -f docker/Dockerfile-${PLATFORM} docker/
+
+docker push scikitbuild/manylinux2010_${PLATFORM}:${COMMIT}
+```
+
+
 How to be granted push rights ?
 -------------------------------
 

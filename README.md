@@ -11,11 +11,13 @@ official repository.
 Docker images associated with this repository are manually published into the
 [scikitbuild](https://cloud.docker.com/u/scikitbuild/repository/list) dockerhub organization.
 
+**Motivation**: Since integration of Python 3.8 pre-release in upstream images was not possible,
+these custom images provide support for it. Read [here](https://github.com/pypa/manylinux/pull/273) for more details.
 
 Available branches
 ------------------
 
-* [scikit-build-manylinux1-2019-03-01-91cb02fb8](https://github.com/scikit-build/manylinux/tree/scikit-build-manylinux1-2019-03-01-91cb02fb8): Add Python 3.8.0a2. Integration in upstream was not possible. Read [here](https://github.com/pypa/manylinux/pull/273) for more details.
+* [scikit-build-manylinux1-2019-03-01-91cb02fb8](https://github.com/scikit-build/manylinux/tree/scikit-build-manylinux1-2019-03-01-91cb02fb8): Add Python 3.8.0a2.
 
 * [scikit-build-manylinux2010-2019-05-06-1a8986532](https://github.com/scikit-build/manylinux/tree/scikit-build-manylinux2010-2019-05-06-1a8986532): Add Python 3.8.0a4.
 

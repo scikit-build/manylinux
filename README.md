@@ -62,7 +62,7 @@ git checkout -b ${BRANCH_NAME} ${manylinuxSHA}
    - the commit hash included in each branch name is the manylinux *upstream* hash, so
      scikit-build specific commits may be viewed with the git range (`..`) operation:
 ```
-          git log --pretty=format:"%h" {manylinuxSHA}..scikit-build-manylinux1-YYYY-MM-DD-{manylinuxSHA}
+          git log --pretty=format:"%h" ${manylinuxSHA}..scikit-build-manylinux1-YYYY-MM-DD-${manylinuxSHA}
 ```
 
 4. Test the changes
